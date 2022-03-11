@@ -13,20 +13,15 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.Source;
 
-import java.util.Map;
+public class ProfilePage extends AppCompatActivity {
 
-public class ProfileActivity extends AppCompatActivity {
     private Button Logout;
     private FirebaseUser user;
     private String UserID;
@@ -43,7 +38,7 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(ProfileActivity.this,MainActivity.class));
+                startActivity(new Intent(ProfilePage.this, LogInPage.class));
             }
         });
         user = FirebaseAuth.getInstance().getCurrentUser();

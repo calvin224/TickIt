@@ -5,6 +5,7 @@ import static android.content.ContentValues.TAG;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -54,7 +55,9 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
             case R.id.RegisterUser:
                 RegisterUser();
                 System.out.println("it works");
+                startActivity(new Intent(this,LogInPage.class));
                 break;
+
         }
     }
     private void RegisterUser() {

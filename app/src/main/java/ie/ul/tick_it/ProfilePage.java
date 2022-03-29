@@ -5,10 +5,8 @@ import static android.content.ContentValues.TAG;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -22,6 +20,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class ProfilePage extends AppCompatActivity {
 
+
     private Button Logout;
     private FirebaseUser user;
     private String UserID;
@@ -30,17 +29,9 @@ public class ProfilePage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_profile_page);
 
-        Logout = (Button) findViewById(R.id.logout);
 
-        Logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(ProfilePage.this, LogInPage.class));
-            }
-        });
         user = FirebaseAuth.getInstance().getCurrentUser();
         UserID = user.getUid();
         final TextView nameTextView = (TextView) findViewById(R.id.DisplayName);
@@ -65,6 +56,5 @@ public class ProfilePage extends AppCompatActivity {
                 }
             }
         });
-
     }
 }

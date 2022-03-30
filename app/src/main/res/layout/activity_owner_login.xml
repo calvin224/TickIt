@@ -4,41 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LogInPage"
-    tools:layout_editor_absoluteX="1dp"
-    tools:layout_editor_absoluteY="0dp">
+    tools:context=".OwnerLogin">
+
+
+    <TextView
+        android:id="@+id/OwnerSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="230dp"
+        android:text="Owner Signup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/UserLogin" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="38dp"
         android:layout_marginStart="9dp"
-        android:layout_marginTop="269dp"
+        android:layout_marginTop="69dp"
         android:layout_marginEnd="7dp"
-        android:layout_marginBottom="156dp"
+        android:layout_marginBottom="67dp"
         android:text="Password"
-        app:layout_constraintBottom_toTopOf="@+id/OwnerLogin"
+        app:layout_constraintBottom_toTopOf="@+id/signIn"
         app:layout_constraintEnd_toStartOf="@+id/editTextPassword"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="66dp"
-        android:layout_marginTop="338dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginBottom="85dp"
         android:text="Forgot Password"
-        app:layout_constraintEnd_toStartOf="@+id/Register"
-        app:layout_constraintStart_toStartOf="@+id/textView7"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintStart_toStartOf="@+id/textView8" />
 
     <TextView
         android:id="@+id/Register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="6dp"
+        android:layout_marginEnd="7dp"
         android:layout_marginBottom="17dp"
         android:text="Register"
         app:layout_constraintBottom_toTopOf="@+id/signIn"
@@ -49,7 +57,7 @@
         android:layout_width="214dp"
         android:layout_height="48dp"
         android:layout_marginTop="36dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginBottom="36dp"
         android:text="Sign In"
         app:layout_constraintBottom_toBottomOf="@+id/progressBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,8 +69,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="197dp"
-        android:layout_marginEnd="93dp"
-        android:layout_marginBottom="196dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="197dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
@@ -76,7 +84,7 @@
         android:id="@+id/editTextPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="93dp"
+        android:layout_marginEnd="92dp"
         android:ems="10"
         android:inputType="textPassword"
         android:minHeight="48dp"
@@ -100,12 +108,10 @@
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="91dp"
-        app:layout_constraintEnd_toEndOf="@+id/signIn"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/OwnerSignup"
+        app:layout_constraintEnd_toStartOf="@+id/OwnerSignup" />
 
     <TextView
         android:id="@+id/textView7"
@@ -122,26 +128,14 @@
         app:layout_constraintTop_toTopOf="@+id/textView6" />
 
     <TextView
-        android:id="@+id/OwnerLogin"
+        android:id="@+id/UserLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="249dp"
-        android:text="Owner Login"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="6dp"
+        android:text="UserLogin"
         app:layout_constraintEnd_toStartOf="@+id/OwnerSignup"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-    <TextView
-        android:id="@+id/OwnerSignup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:text="Owner Signup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/OwnerLogin"
         app:layout_constraintTop_toBottomOf="@+id/progressBar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

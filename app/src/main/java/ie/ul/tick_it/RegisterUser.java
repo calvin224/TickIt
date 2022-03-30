@@ -22,10 +22,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-
-import org.w3c.dom.Text;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -41,7 +38,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_user);
         mAuth = FirebaseAuth.getInstance();
-        RegisterUser = (Button) findViewById(R.id.RegisterUser);
+        RegisterUser = (Button) findViewById(R.id.RegisterOwner);
         RegisterUser.setOnClickListener(this);
         Name = (EditText) findViewById(R.id.Name);
         Age = (EditText) findViewById(R.id.Age);
@@ -52,7 +49,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.RegisterUser:
+            case R.id.RegisterOwner:
                 RegisterUser();
                 System.out.println("it works");
                 startActivity(new Intent(this,LogInPage.class));

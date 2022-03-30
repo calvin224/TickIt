@@ -4,7 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterUser">
+    tools:context=".OwnerSignup">
+
+    <TextView
+        android:id="@+id/ownerLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginBottom="172dp"
+        android:text="Owner Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegisterOwner" />
 
     <TextView
         android:id="@+id/textView9"
@@ -50,7 +61,7 @@
         android:layout_width="189dp"
         android:layout_height="0dp"
         android:layout_marginTop="71dp"
-        android:layout_marginBottom="47dp"
+        android:layout_marginBottom="46dp"
         android:text="Tick-It!"
         app:layout_constraintBottom_toTopOf="@+id/Name"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +72,7 @@
         android:id="@+id/EmailAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="101dp"
+        android:layout_marginEnd="100dp"
         android:layout_marginBottom="14dp"
         android:ems="10"
         android:inputType="textEmailAddress"
@@ -75,7 +86,7 @@
         android:id="@+id/Password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="101dp"
+        android:layout_marginEnd="100dp"
         android:layout_marginBottom="23dp"
         android:ems="10"
         android:inputType="textPassword"
@@ -89,7 +100,7 @@
         android:id="@+id/Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="99dp"
+        android:layout_marginEnd="98dp"
         android:layout_marginBottom="17dp"
         android:autofillHints=""
         android:ems="10"
@@ -104,7 +115,7 @@
         android:id="@+id/Age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="99dp"
+        android:layout_marginEnd="98dp"
         android:layout_marginBottom="15dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -118,9 +129,9 @@
         android:id="@+id/RegisterOwner"
         android:layout_width="216dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="222dp"
-        android:text="Register User"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="31dp"
+        android:text="Register Owner"
+        app:layout_constraintBottom_toTopOf="@+id/ownerLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Password"
@@ -139,4 +150,5 @@
         app:layout_constraintEnd_toStartOf="@+id/Name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

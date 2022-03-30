@@ -2,22 +2,18 @@ package ie.ul.tick_it;
 
 import androidx.annotation.NonNull;
 
-public class Business {
+public class Ticket {
     private String Name;
     private String Location;
     private String Image;
     private String Type;
     private String Index;
 
-    public Business() {
+    public Ticket() {
     }
 
-    public Business(String Name,String Location,String Image,String Type,String Index) {
+    public Ticket(String Name) {
         this.Name = Name;
-        this.Location = Location;
-        this.Image=Image;
-        this.Type =Type;
-        this.Index=Index;
     }
 
     public String getName() {

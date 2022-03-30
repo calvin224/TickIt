@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TickIt">
         <activity
+            android:name=".TicketPage"
+            android:exported="false" />
+        <activity
+            android:name=".BusinessPage"
+            android:exported="false" />
+        <activity
             android:name=".OwnerHomePage"
             android:exported="false" />
         <activity

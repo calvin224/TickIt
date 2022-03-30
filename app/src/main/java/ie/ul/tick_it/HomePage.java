@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -23,6 +25,7 @@ import java.util.ArrayList;
 public class HomePage extends AppCompatActivity  implements View.OnClickListener{
     private FirebaseFirestore DB = FirebaseFirestore.getInstance();
     private Button Profile;
+    private Business temp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +39,7 @@ public class HomePage extends AppCompatActivity  implements View.OnClickListener
                 this,android.R.layout.simple_list_item_1,new ArrayList<Business>()
         );
         BusinessListView.setAdapter(adapter);
-        DB.collection("Restaurants")
+        DB.collection("Business")
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
@@ -51,21 +54,20 @@ public class HomePage extends AppCompatActivity  implements View.OnClickListener
 
                     }
                 });
-        DB.collection("NightClubs")
-                .get()
-                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                    @Override
-                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                        for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
-                            Business temp = document.toObject(Business.class);
-                            BusinessList.add(temp);
-                            Log.d(TAG, temp.getName() + " " + temp.getLocation() + " " + temp.getImage());
-                        }
-                        adapter.clear();
-                        adapter.addAll(BusinessList);
 
-                    }
-                });
+        BusinessListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Business temp = BusinessList.get(i);
+                Intent myIntent = new Intent(HomePage.this, BusinessPage.class);
+                myIntent.putExtra("Name", temp.getName());
+                myIntent.putExtra("Location", temp.getLocation());
+                myIntent.putExtra("", temp.getName());
+                startActivity(myIntent);
+
+            }
+        });
+
 
     }
 

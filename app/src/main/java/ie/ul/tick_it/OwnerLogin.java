@@ -53,7 +53,6 @@ public class OwnerLogin extends AppCompatActivity implements View.OnClickListene
             case R.id.OwnerSignup:
                 startActivity(new Intent(this,OwnerSignup.class));
                 break;
-
         }
     }
     private void userLogin() {

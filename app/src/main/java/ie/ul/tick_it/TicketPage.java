@@ -16,5 +16,6 @@ public class TicketPage extends AppCompatActivity {
         String name = mIntent.getStringExtra("Name");
         final TextView Ticketname = (TextView) findViewById(R.id.ticketname);
         Ticketname.setText(name);
+
     }
 }

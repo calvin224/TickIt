@@ -28,6 +28,9 @@
             android:name=".BusinessPage"
             android:exported="false" />
         <activity
+            android:name=".RegisterBusiness"
+            android:exported="false" />
+        <activity
             android:name=".OwnerHomePage"
             android:exported="false" />
         <activity

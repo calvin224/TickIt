@@ -42,7 +42,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         RegisterUser.setOnClickListener(this);
         Name = (EditText) findViewById(R.id.Name);
         Age = (EditText) findViewById(R.id.Age);
-        EmailAddress = (EditText) findViewById(R.id.EmailAddress);
+        EmailAddress = (EditText) findViewById(R.id.About);
         Password = (EditText) findViewById(R.id.Password);
     }
 

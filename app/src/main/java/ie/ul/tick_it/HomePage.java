@@ -47,7 +47,7 @@ public class HomePage extends AppCompatActivity  implements View.OnClickListener
                         for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
                             Business temp = document.toObject(Business.class);
                             BusinessList.add(temp);
-                            Log.d(TAG, temp.getName() + " " + temp.getLocation() + " " + temp.getImage());
+
                         }
                         adapter.clear();
                         adapter.addAll(BusinessList);

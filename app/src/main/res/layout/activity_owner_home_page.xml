@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".OwnerHomePage">
 
+    <ListView
+        android:id="@+id/ListView"
+        android:layout_width="313dp"
+        android:layout_height="385dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.281"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="1.0" />
+
     <TextView
         android:id="@+id/displayowneremail"
         android:layout_width="wrap_content"
@@ -31,4 +46,25 @@
         android:layout_marginBottom="17dp"
         app:layout_constraintBottom_toTopOf="@+id/displayowneremail"
         app:layout_constraintStart_toStartOf="@+id/displayowneremail" />
+
+    <Button
+        android:id="@+id/NewBusiness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="26dp"
+        android:text="New"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="252dp"
+        android:text="Your Businesses"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

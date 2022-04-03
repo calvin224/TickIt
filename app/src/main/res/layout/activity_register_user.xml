@@ -28,7 +28,7 @@
         android:layout_marginBottom="24dp"
         android:text="Email"
         app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintEnd_toStartOf="@+id/EmailAddress"
+        app:layout_constraintEnd_toStartOf="@+id/About"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/EmailAddress"
+        android:id="@+id/About"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="101dp"
@@ -83,7 +83,7 @@
         app:layout_constraintBottom_toTopOf="@+id/RegisterOwner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/EmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/About" />
 
     <EditText
         android:id="@+id/Name"
@@ -109,7 +109,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/EmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/About"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/Name" />

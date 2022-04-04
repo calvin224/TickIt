@@ -62,7 +62,6 @@ public class HomePage extends AppCompatActivity  implements View.OnClickListener
                 Intent myIntent = new Intent(HomePage.this, BusinessPage.class);
                 myIntent.putExtra("Name", temp.getName());
                 myIntent.putExtra("Location", temp.getLocation());
-                myIntent.putExtra("", temp.getName());
                 startActivity(myIntent);
 
             }

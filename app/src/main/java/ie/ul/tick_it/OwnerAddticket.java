@@ -42,7 +42,7 @@ public class OwnerAddticket extends AppCompatActivity implements View.OnClickLis
         About = (EditText) findViewById(R.id.About);
         Location = (EditText) findViewById(R.id.BusinessAddress);
         Image = (EditText) findViewById(R.id.BusinessImage);
-        Type = (EditText) findViewById(R.id.businesstype);
+        Type = (EditText) findViewById(R.id.businesscount);
     }
 
     @Override
@@ -71,7 +71,7 @@ public class OwnerAddticket extends AppCompatActivity implements View.OnClickLis
             businessMap.put("image", image);
             businessMap.put("Location", location);
             businessMap.put("Type", type);
-            db.collection("Tickets").document()
+            db.collection("Tickets").document(Eventname)
                     .set(businessMap)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override

@@ -14,24 +14,25 @@ public class Ticket {
     private String UserID;
     private String Email;
     private String BusinessName;
+    private String count;
 
     public Ticket() {
     }
 
-    public Ticket(String BusinessName,String EventName,String About,String Location,String image,String type) {
+    public Ticket(String BusinessName,String EventName,String About,String Location,String image,String count) {
         this.Name = BusinessName;
         this.EventName = EventName;
         this.About = About;
         this.Location = Location;
         this.Image = image;
-        this.Type = type;
+        this.count= count;
     }
     
-    public Ticket(String userID, String businessName, String userEmail, String userName, String businessLocation) {
+    public Ticket(String userID, String businessName, String EventName, String userName, String businessLocation) {
         this.BusinessName = businessName;
         this.UserID = userID;
         this.Name = userName;
-        this.Email = userEmail;
+        this.EventName = EventName;
         this.Location = businessLocation;
     }
 
@@ -68,6 +69,9 @@ public class Ticket {
     }
     public String getEventName() {
         return EventName;
+    }
+    public String getCount() {
+        return count;
     }
 
     @NonNull

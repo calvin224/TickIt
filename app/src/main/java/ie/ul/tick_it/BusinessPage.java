@@ -67,7 +67,7 @@ public class BusinessPage extends AppCompatActivity {
                 Intent myIntent = new Intent(BusinessPage.this, TicketPage.class);
                 myIntent.putExtra("Name", temp.getName());
                 myIntent.putExtra("Location", temp.getLocation());
-
+                myIntent.putExtra("EventName", temp.getEventName());
                 startActivity(myIntent);
             }
         });

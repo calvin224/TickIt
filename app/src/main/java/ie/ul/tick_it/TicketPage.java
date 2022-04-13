@@ -35,7 +35,7 @@ public class TicketPage extends AppCompatActivity implements View.OnClickListene
     private FirebaseUser user;
     private String BusinessName, BusinessLocation, UserID, UserName, UserEmail, Eventname, About, Count;
     private int countint;
-    private Button addbutton;
+    private Button addbutton,location;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
@@ -45,6 +45,8 @@ public class TicketPage extends AppCompatActivity implements View.OnClickListene
         Intent mIntent = getIntent();
         addbutton = (Button) findViewById(R.id.button);
         addbutton.setOnClickListener(this);
+        location = (Button) findViewById(R.id.location);
+        location.setOnClickListener(this);
         BusinessName = mIntent.getStringExtra("Name");
         BusinessLocation = mIntent.getStringExtra("Location");
         Eventname = mIntent.getStringExtra("EventName");
@@ -80,6 +82,11 @@ public class TicketPage extends AppCompatActivity implements View.OnClickListene
         switch (v.getId()) {
             case R.id.button:
                 taketicket();
+                break;
+            case R.id.location:
+                Intent myIntent = new Intent(TicketPage.this, Maps.class);
+                myIntent.putExtra("location",BusinessLocation);
+                startActivity(myIntent);
                 break;
         }
 

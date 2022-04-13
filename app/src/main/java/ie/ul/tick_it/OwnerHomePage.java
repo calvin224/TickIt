@@ -28,10 +28,11 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-public class OwnerHomePage extends AppCompatActivity {
+public class OwnerHomePage extends AppCompatActivity implements View.OnClickListener  {
     private Button Logout;
     private FirebaseUser user;
     private String UserID;
+    private Button newbusiness;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
@@ -44,7 +45,8 @@ public class OwnerHomePage extends AppCompatActivity {
         final TextView nameTextView = (TextView) findViewById(R.id.displayownername);
         final TextView EmailTextView = (TextView) findViewById(R.id.displayowneremail);
         final TextView AgeTextView = (TextView) findViewById(R.id.displayownerage);
-
+        newbusiness = (Button) findViewById(R.id.NewBusiness);
+        newbusiness.setOnClickListener((View.OnClickListener) this);
         DocumentReference docRef = db.collection("Owners").document(UserID);
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
@@ -80,7 +82,6 @@ public class OwnerHomePage extends AppCompatActivity {
                                 Business temp = document.toObject(Business.class);
                                 BusinessList.add(temp);
 
-
                         }
                         adapter.clear();
                         adapter.addAll(BusinessList);
@@ -99,5 +100,14 @@ public class OwnerHomePage extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.NewBusiness:
+                startActivity(new Intent(this,RegisterBusiness.class));
+                break;
+        }
     }
     }

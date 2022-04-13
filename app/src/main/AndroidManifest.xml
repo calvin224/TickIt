@@ -23,7 +23,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="" />
+            android:value="AIzaSyDNvxmKj29W3hmJcq7uXuP_XvCNHGUu5cE" />
 
         <activity
             android:name=".Maps"
@@ -46,9 +46,6 @@
             android:exported="false" />
         <activity
             android:name=".BusinessPage"
-            android:exported="false" />
-        <activity
-            android:name=".RegisterBusiness"
             android:exported="false" />
         <activity
             android:name=".OwnerHomePage"

@@ -70,7 +70,7 @@ public class OwnerAddticket extends AppCompatActivity implements View.OnClickLis
             businessMap.put("About", about);
             businessMap.put("image", image);
             businessMap.put("Location", location);
-            businessMap.put("Type", type);
+            businessMap.put("Count", type);
             db.collection("Tickets").document(Eventname)
                     .set(businessMap)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {

@@ -43,7 +43,7 @@ public class OwnerSignup extends AppCompatActivity implements View.OnClickListen
             RegisterUser.setOnClickListener(this);
             Name = (EditText) findViewById(R.id.Name);
             Age = (EditText) findViewById(R.id.Age);
-            EmailAddress = (EditText) findViewById(R.id.About);
+            EmailAddress = (EditText) findViewById(R.id.EmailAddress);
             Password = (EditText) findViewById(R.id.Password);
             ownerLogin = (TextView) findViewById(R.id.ownerLogin);
             ownerLogin.setOnClickListener(this);

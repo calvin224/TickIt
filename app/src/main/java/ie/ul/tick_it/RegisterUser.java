@@ -29,7 +29,7 @@ import java.util.Map;
 
 public class RegisterUser extends AppCompatActivity implements View.OnClickListener {
     private FirebaseAuth mAuth;
-    private TextView banner, RegisterUser;
+    private TextView banner, RegisterUser, userLogin;
     private EditText Name, Age, EmailAddress, Password;
     private ProgressBar progressBar;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -42,8 +42,10 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         RegisterUser.setOnClickListener(this);
         Name = (EditText) findViewById(R.id.Name);
         Age = (EditText) findViewById(R.id.Age);
-        EmailAddress = (EditText) findViewById(R.id.About);
+        EmailAddress = (EditText) findViewById(R.id.EmailAddress);
         Password = (EditText) findViewById(R.id.Password);
+        userLogin = (TextView) findViewById(R.id.userLogin);
+        userLogin.setOnClickListener(this);
     }
 
     @Override
@@ -52,6 +54,10 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
             case R.id.RegisterOwner:
                 RegisterUser();
                 System.out.println("it works");
+                startActivity(new Intent(this,LogInPage.class));
+                break;
+
+                case R.id.userLogin:
                 startActivity(new Intent(this,LogInPage.class));
                 break;
 

@@ -33,9 +33,6 @@ public class LogInPage extends AppCompatActivity implements View.OnClickListener
         OwnerLogin = (TextView) findViewById(R.id.OwnerLogin);
         OwnerLogin.setOnClickListener(this);
 
-        OwnerSignup = (TextView) findViewById(R.id.OwnerSignup);
-        OwnerSignup.setOnClickListener(this);
-
         signIn = (Button) findViewById(R.id.signIn);
         signIn.setOnClickListener(this);
 
@@ -57,10 +54,6 @@ public class LogInPage extends AppCompatActivity implements View.OnClickListener
 
             case R.id.OwnerLogin:
                 startActivity(new Intent(this,OwnerLogin.class));
-                break;
-
-            case R.id.OwnerSignup:
-                startActivity(new Intent(this,OwnerSignup.class));
                 break;
 
         }

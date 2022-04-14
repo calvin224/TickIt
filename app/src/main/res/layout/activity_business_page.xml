@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="74dp"
         android:layout_marginBottom="119dp"
-        app:layout_constraintBottom_toTopOf="@+id/Userticketlistview"
+        app:layout_constraintBottom_toTopOf="@+id/listview"
         app:layout_constraintEnd_toStartOf="@+id/businesslocation"
         app:layout_constraintStart_toStartOf="@+id/businesslocation"
         app:layout_constraintTop_toTopOf="parent" />
@@ -36,7 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/businesslocation" />
 
     <ListView
-        android:id="@+id/Userticketlistview"
+        android:id="@+id/listview"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="34dp"

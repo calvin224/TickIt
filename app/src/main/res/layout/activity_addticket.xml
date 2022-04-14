@@ -7,13 +7,13 @@
     tools:context=".OwnerAddticket">
 
     <EditText
-        android:id="@+id/businesstype"
+        android:id="@+id/businesscount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="96dp"
         android:layout_marginTop="156dp"
         android:ems="10"
-        android:hint="business type"
+        android:hint="business count"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"

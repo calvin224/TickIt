@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -20,8 +21,10 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-public class BusinessPage extends AppCompatActivity {
+public class BusinessPage extends AppCompatActivity implements View.OnClickListener {
     private FirebaseFirestore DB = FirebaseFirestore.getInstance();
+    private Button locationbutton;
+    private String location;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +32,12 @@ public class BusinessPage extends AppCompatActivity {
         setContentView(R.layout.activity_business_page);
         Intent mIntent = getIntent();
         String name = mIntent.getStringExtra("Name");
+        location = mIntent.getStringExtra("Location");
         final TextView businessname = (TextView) findViewById(R.id.businessname);
         final TextView businesslocation = (TextView) findViewById(R.id.businesslocation);
         final TextView businessimage = (TextView) findViewById(R.id.businessimage);
-
+        locationbutton = (Button) findViewById(R.id.BPagelocation );
+        locationbutton.setOnClickListener(this);
         businessname.setText(name);
         businesslocation.setText(name);
         businessimage.setText(name);
@@ -73,5 +78,16 @@ public class BusinessPage extends AppCompatActivity {
         });
 
 
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.BPagelocation:
+                Intent myIntent = new Intent(BusinessPage.this, Maps.class);
+                myIntent.putExtra("location",location);
+                startActivity(myIntent);
+                break;
+        }
     }
 }

@@ -22,6 +22,28 @@
         <entry key="..\:/Users/Calvi/AndroidStudioProjects/TickIt/app/src/main/res/layout/activity_register_user.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Calvi/AndroidStudioProjects/TickIt/app/src/main/res/layout/activity_sort_filter_events.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/Calvi/AndroidStudioProjects/TickIt/app/src/main/res/layout/activity_ticket_page.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Calvi/AndroidStudioProjects/TickIt/app/src/main/res/layout/activity_user_ticket.xml" value="0.1398148148148148" />
+        <entry key="..\:/Users/cians/Downloads/TickIt-master/app/src/main/res/drawable/bg_home.xml" value="0.544" />
+        <entry key="..\:/Users/cians/Downloads/TickIt-master/app/src/main/res/drawable/bg_main.xml" value="0.544" />
+        <entry key="..\:/Users/cians/Downloads/TickIt-master/app/src/main/res/drawable/btn_bg.xml" value="0.544" />
+        <entry key="..\:/Users/cians/Downloads/TickIt-master/app/src/main/res/drawable/et_bg.xml" value="0.544" />
+        <entry key="..\:/Users/cians/Downloads/TickIt-master/app/src/main/res/drawable/ic_eye.xml" value="0.544" />
+        <entry key="..\:/Users/cians/Downloads/TickIt-master/app/src/main/res/drawable/ic_eye_h.xml" value="0.544" />
+        <entry key="..\:/Users/cians/Downloads/TickIt-master/app/src/main/res/layout/activity_business_page.xml" value="0.5" />
+        <entry key="..\:/Users/cians/Downloads/TickIt-master/app/src/main/res/layout/activity_home.xml" value="0.5505208333333333" />
+        <entry key="..\:/Users/cians/Downloads/TickIt-master/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Users/cians/Downloads/TickIt-master/app/src/main/res/layout/activity_owner_home_page.xml" value="0.5505208333333333" />
+        <entry key="..\:/Users/cians/Downloads/TickIt-master/app/src/main/res/layout/activity_owner_login.xml" value="0.25" />
+        <entry key="..\:/Users/cians/Downloads/TickIt-master/app/src/main/res/layout/activity_owner_signup.xml" value="0.5505208333333333" />
+        <entry key="..\:/Users/cians/Downloads/TickIt-master/app/src/main/res/layout/activity_profile_page.xml" value="0.5505208333333333" />
+        <entry key="..\:/Users/cians/Downloads/TickIt-master/app/src/main/res/layout/activity_register_business.xml" value="0.5505208333333333" />
+        <entry key="..\:/Users/cians/Downloads/TickIt-master/app/src/main/res/layout/activity_register_user.xml" value="0.5505208333333333" />
+        <entry key="..\:/Users/cians/Downloads/TickIt-master/app/src/main/res/layout/activity_ticket_page.xml" value="0.5505208333333333" />
+        <entry key="..\:/Users/jacky/StudioProjects/TickIt/app/src/main/res/layout/activity_business_page.xml" value="0.14722222222222223" />
+        <entry key="..\:/Users/jacky/StudioProjects/TickIt/app/src/main/res/layout/activity_home.xml" value="0.14722222222222223" />
+        <entry key="..\:/Users/jacky/StudioProjects/TickIt/app/src/main/res/layout/activity_owner_home_page.xml" value="0.22" />
+        <entry key="..\:/Users/jacky/StudioProjects/TickIt/app/src/main/res/layout/activity_register_business.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/jacky/StudioProjects/TickIt/app/src/main/res/layout/activity_register_user.xml" value="0.14722222222222223" />
       </map>
     </option>
   </component>

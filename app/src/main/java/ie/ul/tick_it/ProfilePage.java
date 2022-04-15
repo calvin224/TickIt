@@ -5,28 +5,18 @@ import static android.content.ContentValues.TAG;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
-
-import java.util.ArrayList;
 
 public class ProfilePage extends AppCompatActivity {
 
@@ -36,18 +26,17 @@ public class ProfilePage extends AppCompatActivity {
     private String UserID;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page);
-        ArrayList<Ticket> TicketList = new ArrayList<>();
+
+
         user = FirebaseAuth.getInstance().getCurrentUser();
         UserID = user.getUid();
         final TextView nameTextView = (TextView) findViewById(R.id.DisplayName);
         final TextView EmailTextView = (TextView) findViewById(R.id.DisplayEmail);
         final TextView AgeTextView = (TextView) findViewById(R.id.DisplayAge);
-
 
         DocumentReference docRef = db.collection("Users").document(UserID);
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -65,38 +54,6 @@ public class ProfilePage extends AppCompatActivity {
                 } else {
                     Log.d(TAG, "get failed with ", task.getException());
                 }
-            }
-        });
-
-        ListView ListView = findViewById(R.id.Userticketlistview);
-        ArrayAdapter<Ticket> adapter = new ArrayAdapter<Ticket>(
-                this,android.R.layout.simple_list_item_1,new ArrayList<Ticket>()
-        );
-        ListView.setAdapter(adapter);
-        db.collection("UserTickets")
-                .whereEqualTo("UserID",UserID)
-                .get()
-                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                    @Override
-                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                        for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
-                            Ticket temp = document.toObject(Ticket.class);
-                            TicketList.add(temp);
-
-                        }
-                        adapter.clear();
-                        adapter.addAll(TicketList);
-
-                    }
-                });
-       ListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Ticket temp = TicketList.get(i);
-                Intent myIntent = new Intent(ProfilePage.this, UserTicket.class);
-                myIntent.putExtra("BusinessName", temp.getBusinessName());
-                myIntent.putExtra("Location", temp.getLocation());
-                startActivity(myIntent);
             }
         });
     }

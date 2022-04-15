@@ -45,8 +45,8 @@ public class RegisterBusiness extends AppCompatActivity implements View.OnClickL
         RegisterBusiness = (Button) findViewById(R.id.RegisterBusiness);
         RegisterBusiness.setOnClickListener(this);
         Name = (EditText) findViewById(R.id.Name);
-        Type = (EditText) findViewById(R.id.EventName);
-        EmailAddress = (EditText) findViewById(R.id.About);
+        Type = (EditText) findViewById(R.id.BusinessType);
+        EmailAddress = (EditText) findViewById(R.id.EmailAddress);
         Location = (EditText) findViewById(R.id.BusinessAddress);
         Image = (EditText) findViewById(R.id.BusinessImage);
     }
@@ -95,4 +95,3 @@ public class RegisterBusiness extends AppCompatActivity implements View.OnClickL
             Business business = new Business(name, location, image, type, UserID);
     }
 }
-

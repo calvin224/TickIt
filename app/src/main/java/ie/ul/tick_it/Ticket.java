@@ -27,7 +27,7 @@ public class Ticket {
         this.Image = image;
         this.count= count;
     }
-
+    
     public Ticket(String userID, String businessName, String EventName, String userName, String businessLocation) {
         this.BusinessName = businessName;
         this.UserID = userID;

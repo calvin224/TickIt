@@ -71,27 +71,27 @@ public class RegisterBusiness extends AppCompatActivity implements View.OnClickL
         String image = Image.getText().toString().trim();
         user = FirebaseAuth.getInstance().getCurrentUser();
         UserID = user.getUid();
-            Map<String, Object> businessMap = new HashMap<>();
-            businessMap.put("Name", name);
-            businessMap.put("Type", type);
-            businessMap.put("Email", Email);
-            businessMap.put("Location", location);
-            businessMap.put("Image", image);
-            businessMap.put("OwnerID", UserID);
-            db.collection("Business").document()
-                    .set(businessMap)
-                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                            Log.d(TAG, "DocumentSnapshot successfully written!");
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Log.w(TAG, "Error writing document", e);
-                        }
-                    });
-            Business business = new Business(name, location, image, type, UserID);
+        Map<String, Object> businessMap = new HashMap<>();
+        businessMap.put("Name", name);
+        businessMap.put("Type", type);
+        businessMap.put("Email", Email);
+        businessMap.put("Location", location);
+        businessMap.put("Image", image);
+        businessMap.put("OwnerID", UserID);
+        db.collection("Business").document()
+                .set(businessMap)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d(TAG, "DocumentSnapshot successfully written!");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w(TAG, "Error writing document", e);
+                    }
+                });
+        Business business = new Business(name, location, image, type, UserID);
     }
 }

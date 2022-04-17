@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TickIt">
         <activity
+            android:name=".OwnerAddticket"
+            android:exported="false" />
+        <activity
+            android:name=".OwnerBusinessPage"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterBusiness"
+            android:exported="false" />
+        <activity
             android:name=".userticket"
             android:exported="false" />
         <!--

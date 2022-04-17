@@ -33,7 +33,7 @@ public class OwnerAddticket extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_addticket);
+        setContentView(R.layout.activity_owner_addticket);
         RegisterBusiness = (Button) findViewById(R.id.RegisterBusiness);
         RegisterBusiness.setOnClickListener(this);
         Intent mIntent = getIntent();
@@ -58,34 +58,34 @@ public class OwnerAddticket extends AppCompatActivity implements View.OnClickLis
     }
 
 
-        private void addticket() {
-            String Eventname = EventName.getText().toString().trim();
-            String about = About.getText().toString().trim();
-            String location = Location.getText().toString().trim();
-            String image = Image.getText().toString().trim();
-            String type = Type.getText().toString().trim();
-            Map<String, Object> businessMap = new HashMap<>();
-            businessMap.put("Name", Name);
-            businessMap.put("EventName", Eventname);
-            businessMap.put("About", about);
-            businessMap.put("image", image);
-            businessMap.put("Location", location);
-            businessMap.put("Count", type);
-            db.collection("Tickets").document(Eventname)
-                    .set(businessMap)
-                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                            Log.d(TAG, "DocumentSnapshot successfully written!");
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Log.w(TAG, "Error writing document", e);
-                        }
-                    });
-            Ticket ticket = new Ticket(Name,Eventname,about,location,image,type);
+    private void addticket() {
+        String Eventname = EventName.getText().toString().trim();
+        String about = About.getText().toString().trim();
+        String location = Location.getText().toString().trim();
+        String image = Image.getText().toString().trim();
+        String type = Type.getText().toString().trim();
+        Map<String, Object> businessMap = new HashMap<>();
+        businessMap.put("Name", Name);
+        businessMap.put("EventName", Eventname);
+        businessMap.put("About", about);
+        businessMap.put("image", image);
+        businessMap.put("Location", location);
+        businessMap.put("Count", type);
+        db.collection("Tickets").document(Eventname)
+                .set(businessMap)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d(TAG, "DocumentSnapshot successfully written!");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w(TAG, "Error writing document", e);
+                    }
+                });
+        Ticket ticket = new Ticket(Name,Eventname,about,location,image,type);
 
-        }
     }
+}

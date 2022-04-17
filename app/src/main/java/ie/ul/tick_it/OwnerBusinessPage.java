@@ -19,7 +19,7 @@ public class OwnerBusinessPage extends AppCompatActivity implements View.OnClick
         addticket = (Button) findViewById(R.id.addticket);
         addticket.setOnClickListener(this);
         Intent mIntent = getIntent();
-         name = mIntent.getStringExtra("Name");
+        name = mIntent.getStringExtra("Name");
     }
 
     @Override

@@ -4,15 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OwnerBusinessPage">
-
-    <Button
-        android:id="@+id/addticket"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="33dp"
-        android:text="add ticket"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="274dp" />
+    tools:context=".FilteredHomePage">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

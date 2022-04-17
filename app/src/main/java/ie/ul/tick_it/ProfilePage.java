@@ -28,13 +28,14 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-public class ProfilePage extends AppCompatActivity {
+public class ProfilePage extends AppCompatActivity implements View.OnClickListener {
 
 
     private Button Logout;
     private FirebaseUser user;
     private String UserID;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private Button editprofile;
 
 
     @Override
@@ -47,7 +48,8 @@ public class ProfilePage extends AppCompatActivity {
         final TextView nameTextView = (TextView) findViewById(R.id.DisplayName);
         final TextView EmailTextView = (TextView) findViewById(R.id.DisplayEmail);
         final TextView AgeTextView = (TextView) findViewById(R.id.DisplayAge);
-
+        editprofile = (Button) findViewById(R.id.editprofile);
+        editprofile.setOnClickListener(this);
 
         DocumentReference docRef = db.collection("Users").document(UserID);
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -99,5 +101,13 @@ public class ProfilePage extends AppCompatActivity {
                 startActivity(myIntent);
             }
         });
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.editprofile:
+                startActivity(new Intent(this, EditUserProfile.class));
+                break; }
     }
 }

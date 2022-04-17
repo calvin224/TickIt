@@ -10,39 +10,53 @@
         android:id="@+id/DisplayName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="101dp"
-        android:layout_marginBottom="105dp"
-        app:layout_constraintBottom_toTopOf="@+id/listview"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginBottom="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/DisplayEmail"
+        app:layout_constraintEnd_toStartOf="@+id/DisplayEmail"
+        app:layout_constraintStart_toStartOf="@+id/DisplayEmail"
+        app:layout_constraintTop_toBottomOf="@+id/editprofile" />
 
     <TextView
         android:id="@+id/DisplayEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="@+id/DisplayName"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/DisplayAge"
+        app:layout_constraintEnd_toStartOf="@+id/DisplayAge"
+        app:layout_constraintStart_toStartOf="@+id/DisplayAge"
         app:layout_constraintTop_toBottomOf="@+id/DisplayName" />
 
     <TextView
         android:id="@+id/DisplayAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
-        app:layout_constraintStart_toStartOf="@+id/DisplayEmail"
+        android:layout_marginStart="53dp"
+        android:layout_marginBottom="31dp"
+        app:layout_constraintBottom_toTopOf="@+id/listview"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DisplayEmail" />
 
     <ListView
         android:id="@+id/listview"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="11dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="13dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DisplayName" />
+        app:layout_constraintTop_toBottomOf="@+id/DisplayAge" />
+
+    <Button
+        android:id="@+id/editprofile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="12dp"
+        android:text="edit profile"
+        app:layout_constraintBottom_toTopOf="@+id/DisplayName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

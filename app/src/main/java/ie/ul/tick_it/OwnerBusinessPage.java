@@ -8,14 +8,13 @@ import android.view.View;
 import android.widget.Button;
 
 public class OwnerBusinessPage extends AppCompatActivity implements View.OnClickListener {
-    private Button editbusiness,addticket;
+    private Button addticket;
     String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_owner_business_page);
-        editbusiness = (Button) findViewById(R.id.editbusiness);
         addticket = (Button) findViewById(R.id.addticket);
         addticket.setOnClickListener(this);
         Intent mIntent = getIntent();
@@ -25,9 +24,7 @@ public class OwnerBusinessPage extends AppCompatActivity implements View.OnClick
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.editbusiness:
 
-                break;
             case R.id.addticket:
                 goaddticket();
                 break;

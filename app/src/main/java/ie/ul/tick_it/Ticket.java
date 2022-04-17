@@ -73,7 +73,9 @@ public class Ticket {
     public String getCount() {
         return count;
     }
-
+    public String getUserID() {
+        return UserID;
+    }
     @NonNull
     @Override
     public String toString() {

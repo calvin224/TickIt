@@ -21,6 +21,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.jar.Attributes;
 
 public class HomePage extends AppCompatActivity  implements View.OnClickListener{
     private FirebaseFirestore DB = FirebaseFirestore.getInstance();
@@ -54,7 +55,6 @@ public class HomePage extends AppCompatActivity  implements View.OnClickListener
 
                     }
                 });
-
         BusinessListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {

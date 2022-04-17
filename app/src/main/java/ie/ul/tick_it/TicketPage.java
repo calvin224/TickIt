@@ -36,6 +36,7 @@ public class TicketPage extends AppCompatActivity implements View.OnClickListene
     private String BusinessName, BusinessLocation, UserID, UserName, UserEmail, Eventname, About, Count;
     private int countint;
     private Button addbutton,location;
+    private int hastaken = 0;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
@@ -94,6 +95,9 @@ public class TicketPage extends AppCompatActivity implements View.OnClickListene
 
     private void taketicket() {
         getcount();
+        if(hastaken == 1) {
+            addbutton.setText("You have a ticket");
+        } else
         if (Count.equals("-1")) {
             addbutton.setText("full");
         } else {
@@ -121,6 +125,8 @@ public class TicketPage extends AppCompatActivity implements View.OnClickListene
                     });
             Ticket ticket = new Ticket(UserID, BusinessName, UserEmail, UserName, BusinessLocation);
             minusticket();
+            addbutton.setText("You have a ticket");
+            hastaken = 1;
         }
     }
 
@@ -166,4 +172,5 @@ public class TicketPage extends AppCompatActivity implements View.OnClickListene
             }
         });
     }
+
 }

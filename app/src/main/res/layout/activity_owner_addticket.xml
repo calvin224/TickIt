@@ -13,7 +13,7 @@
         android:layout_marginStart="96dp"
         android:layout_marginTop="156dp"
         android:ems="10"
-        android:hint="business count"
+        android:hint="count"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"

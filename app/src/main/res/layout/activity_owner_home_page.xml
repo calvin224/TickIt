@@ -9,50 +9,47 @@
     <ListView
         android:id="@+id/ListView"
         android:layout_width="313dp"
-        android:layout_height="385dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="48dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginBottom="49dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.281"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/displayownerage" />
 
     <TextView
         android:id="@+id/displayowneremail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="147dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="146dp"
+        app:layout_constraintEnd_toStartOf="@+id/displayownerage"
+        app:layout_constraintStart_toStartOf="@+id/displayownerage"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/displayownerage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        app:layout_constraintStart_toStartOf="@+id/displayowneremail"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="19dp"
+        app:layout_constraintStart_toStartOf="@+id/ListView"
         app:layout_constraintTop_toBottomOf="@+id/displayowneremail" />
 
     <TextView
         android:id="@+id/displayownername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginBottom="17dp"
+        android:layout_marginBottom="18dp"
         app:layout_constraintBottom_toTopOf="@+id/displayowneremail"
+        app:layout_constraintEnd_toStartOf="@+id/displayowneremail"
         app:layout_constraintStart_toStartOf="@+id/displayowneremail" />
 
     <Button
         android:id="@+id/NewBusiness"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="26dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="25dp"
         android:text="New"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -61,9 +58,18 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="252dp"
+        android:layout_marginTop="27dp"
         android:text="Your Businesses"
+        app:layout_constraintStart_toStartOf="@+id/ListView"
+        app:layout_constraintTop_toTopOf="@+id/ListView" />
+
+    <Button
+        android:id="@+id/editownerprofile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="21dp"
+        android:text="Edit Profile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

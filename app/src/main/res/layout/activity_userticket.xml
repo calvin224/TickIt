@@ -42,7 +42,7 @@
         android:drawableLeft="@drawable/ic_minus"
         android:paddingLeft="24dp"
         android:paddingRight="48dp"
-        android:text="Location Details"
+        android:text="Remove Ticket"
         android:layout_marginBottom="64dp"
         android:textAllCaps="false"
         android:textColor="@color/text_details"

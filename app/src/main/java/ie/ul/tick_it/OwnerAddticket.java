@@ -41,7 +41,7 @@ public class OwnerAddticket extends AppCompatActivity implements View.OnClickLis
     private EditText About;
     private EditText Location;
     private EditText Image;
-    private EditText Type;
+    private EditText Count;
     private TextView banner, RegisterBusiness;
     private DatePickerDialog datePickerDialog;
     private Button dateButton;
@@ -58,7 +58,7 @@ public class OwnerAddticket extends AppCompatActivity implements View.OnClickLis
         About = (EditText) findViewById(R.id.About);
         Location = (EditText) findViewById(R.id.BusinessAddress);
         Image = (EditText) findViewById(R.id.BusinessImage);
-        Type = (EditText) findViewById(R.id.businesscount);
+        Count = (EditText) findViewById(R.id.businesscount);
         initDatePicker();
         dateButton = findViewById(R.id.datePickerButton);
         dateButton.setText(getTodaysDate());
@@ -82,7 +82,7 @@ public class OwnerAddticket extends AppCompatActivity implements View.OnClickLis
         String about = About.getText().toString().trim();
         String location = Location.getText().toString().trim();
         String image = Image.getText().toString().trim();
-        String type = Type.getText().toString().trim();
+        String count = Count.getText().toString().trim();
         String indate = dateButton.getText().toString().trim();
         LocalDate eventdate = LocalDate.parse(indate, DateTimeFormatter.ofPattern("MMM d yyy"));
         ZoneId zoneId = ZoneId.systemDefault();
@@ -94,7 +94,7 @@ public class OwnerAddticket extends AppCompatActivity implements View.OnClickLis
         businessMap.put("About", about);
         businessMap.put("image", image);
         businessMap.put("Location", location);
-        businessMap.put("Count", type);
+        businessMap.put("Count", count);
         businessMap.put("Date", date);
         db.collection("Tickets").document(Eventname)
                 .set(businessMap)
@@ -110,7 +110,7 @@ public class OwnerAddticket extends AppCompatActivity implements View.OnClickLis
                         Log.w(TAG, "Error writing document", e);
                     }
                 });
-        Ticket ticket = new Ticket(Name,Eventname,about,location,image,type,date);
+        Ticket ticket = new Ticket(Name,Eventname,about,location,image,count,date);
 
     }
     private String getTodaysDate()

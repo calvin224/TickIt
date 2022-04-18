@@ -98,6 +98,8 @@ public class OwnerHomePage extends AppCompatActivity implements View.OnClickList
                 Intent myIntent = new Intent(OwnerHomePage.this, OwnerBusinessPage.class);
                 myIntent.putExtra("Name", temp.getName());
                 myIntent.putExtra("Location", temp.getLocation());
+                myIntent.putExtra("BusinessType", temp.getType());
+                myIntent.putExtra("BusinessEmail", temp.getEmail());
                 startActivity(myIntent);
 
             }

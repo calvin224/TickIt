@@ -10,6 +10,9 @@ import android.widget.Button;
 public class OwnerBusinessPage extends AppCompatActivity implements View.OnClickListener {
     private Button addticket;
     String name;
+    String Location;
+    String BusinessType;
+    String BusinessEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +22,10 @@ public class OwnerBusinessPage extends AppCompatActivity implements View.OnClick
         addticket.setOnClickListener(this);
         Intent mIntent = getIntent();
         name = mIntent.getStringExtra("Name");
+        Location = mIntent.getStringExtra("Location");
+        BusinessType = mIntent.getStringExtra("BusinessType");
+        BusinessEmail = mIntent.getStringExtra("BusinessEmail");
+
     }
 
     @Override

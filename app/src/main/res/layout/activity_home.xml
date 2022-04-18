@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/bg_main"
     android:layout_height="match_parent"
     tools:context=".HomePage">
 
@@ -10,65 +11,115 @@
         android:id="@+id/ListView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginBottom="68dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/restaurants" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/restaurants" />
 
-    <TextView
-        android:id="@+id/textView10"
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="11dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+
+
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="88dp"
+        android:layout_height="80dp"
         android:layout_marginTop="16dp"
-        android:text="For You"
-        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/white_check_mark_symbol_11549993297psg7f12raf"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/profile"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="16dp"
+        android:layout_gravity="center"
+        android:drawableTop="@drawable/ic_user"
         android:text="Profile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="center"
+        android:layout_marginRight="0dp"
+        android:paddingLeft="64dp"
+        android:background="@android:color/transparent"
+        android:textAllCaps="false"
+        android:textColor="@color/text_details"
+        app:layout_constraintBottom_toBottomOf="@+id/Logo"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toEndOf="@+id/Logo"
+        app:layout_constraintTop_toTopOf="@+id/Logo" />
+
 
     <Button
         android:id="@+id/restaurants"
-        android:layout_width="140dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="11dp"
-        android:layout_marginEnd="7dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
         android:text="Restaurants"
-        app:layout_constraintBaseline_toBaselineOf="@+id/nightclubs"
+        android:textAllCaps="false"
+        android:layout_marginTop="0dp"
+        android:textColor="@color/text_details"
+        app:layout_constraintTop_toBottomOf="@id/search"
         app:layout_constraintEnd_toStartOf="@+id/nightclubs"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/guideline_left" />
 
     <Button
         android:id="@+id/nightclubs"
-        android:layout_width="130dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="26dp"
-        android:text="NightClubs"
-        app:layout_constraintEnd_toStartOf="@+id/profile"
-        app:layout_constraintTop_toBottomOf="@+id/profile" />
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
+        android:text="Nightclubs"
+        android:textAllCaps="false"
+        android:layout_marginTop="0dp"
+        android:textColor="@color/text_details"
+        app:layout_constraintTop_toBottomOf="@id/search"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toEndOf="@+id/restaurants" />
 
     <Button
         android:id="@+id/search"
-        android:layout_width="124dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="12dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
         android:text="Search"
-        app:layout_constraintBaseline_toBaselineOf="@+id/nightclubs"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.962"
-        app:layout_constraintStart_toEndOf="@+id/nightclubs" />
+        android:textAllCaps="false"
+        android:layout_marginTop="0dp"
+        android:textColor="@color/text_details"
+        app:layout_constraintTop_toBottomOf="@id/header_line"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toEndOf="@+id/guideline_left" />
+
+
+    <View
+        android:id="@+id/header_line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#fff"
+        app:layout_constraintTop_toBottomOf="@id/textVenue"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textVenue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Venues"
+        android:textColor="@color/text_details"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@id/Logo"
+        android:layout_marginTop="16dp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

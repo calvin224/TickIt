@@ -1,5 +1,7 @@
 package ie.ul.tick_it;
 
+import android.provider.ContactsContract;
+
 import androidx.annotation.NonNull;
 
 public class Business {
@@ -8,16 +10,18 @@ public class Business {
     private String Image;
     private String Type;
     private String Index;
+    private String Email;
 
     public Business() {
     }
 
-    public Business(String Name,String Location,String Image,String Type,String Index) {
+    public Business(String Name,String Location,String Image,String Type,String Email, String Index) {
         this.Name = Name;
         this.Location = Location;
         this.Image=Image;
         this.Type =Type;
         this.Index=Index;
+        this.Email =Email;
     }
 
     public String getName() {
@@ -48,6 +52,8 @@ public class Business {
     public String getIndex() {
         return Index;
     }
+
+    public String getEmail() { return Email;}
 
     @NonNull
     @Override

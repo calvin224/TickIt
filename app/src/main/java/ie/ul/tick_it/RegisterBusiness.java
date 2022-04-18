@@ -92,6 +92,6 @@ public class RegisterBusiness extends AppCompatActivity implements View.OnClickL
                         Log.w(TAG, "Error writing document", e);
                     }
                 });
-        Business business = new Business(name, location, image, type, UserID);
+        Business business = new Business(name, location, image, type, Email, UserID);
     }
 }

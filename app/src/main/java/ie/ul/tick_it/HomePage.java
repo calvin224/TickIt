@@ -25,7 +25,7 @@ import java.util.jar.Attributes;
 
 public class HomePage extends AppCompatActivity  implements View.OnClickListener{
     private FirebaseFirestore DB = FirebaseFirestore.getInstance();
-    private Button Profile;
+    private Button Profile,restaurants,nightclubs,search;
     private Business temp;
 
     @Override
@@ -34,7 +34,13 @@ public class HomePage extends AppCompatActivity  implements View.OnClickListener
         setContentView(R.layout.activity_home);
         ArrayList<Business> BusinessList = new ArrayList<>();
         Profile = (Button) findViewById(R.id.profile);
-        Profile.setOnClickListener((View.OnClickListener) this);
+        Profile.setOnClickListener(this);
+        restaurants = (Button) findViewById(R.id.restaurants);
+        restaurants.setOnClickListener( this);
+        nightclubs = (Button) findViewById(R.id.nightclubs);
+        nightclubs.setOnClickListener(this);
+        search = (Button) findViewById(R.id.search);
+        search.setOnClickListener(this);
         ListView BusinessListView = findViewById(R.id.ListView);
         ArrayAdapter<Business> adapter = new ArrayAdapter<Business>(
                 this,android.R.layout.simple_list_item_1,new ArrayList<Business>()
@@ -72,12 +78,23 @@ public class HomePage extends AppCompatActivity  implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
+        Intent FilteredHomePage = new Intent(HomePage.this, FilteredHomePage.class);
+        Intent Search = new Intent(HomePage.this, Search.class);
         switch (v.getId()){
             case R.id.profile:
                 startActivity(new Intent(this,ProfilePage.class));
                 break;
-
-
+            case R.id.restaurants:
+                FilteredHomePage.putExtra("Filter", "Restaurant");
+                startActivity(FilteredHomePage);
+                break;
+            case R.id.nightclubs:
+                FilteredHomePage.putExtra("Filter", "NightClub");
+                startActivity(FilteredHomePage);
+                break;
+            case R.id.search:
+                startActivity(new Intent(this,Search.class));
+                break;
         }
     }
 

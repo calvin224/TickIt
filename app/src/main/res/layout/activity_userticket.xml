@@ -33,20 +33,22 @@
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <Button
         android:id="@+id/button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Ticket Acquired"
-        android:textAlignment="center"
-        android:textColor="@color/text_details"
+        android:layout_marginTop="64dp"
         android:background="@color/text_details_light"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp"
+        android:drawableLeft="@drawable/ic_minus"
+        android:paddingLeft="24dp"
+        android:paddingRight="48dp"
+        android:text="Location Details"
         android:layout_marginBottom="64dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAllCaps="false"
+        android:textColor="@color/text_details"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left" />
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <Button
         android:id="@+id/UTPageLocation"

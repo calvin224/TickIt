@@ -83,6 +83,7 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                         for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
                             Ticket temp = document.toObject(Ticket.class);
+                            temp.setTicketID(document.getId());
                             TicketList.add(temp);
 
                         }
@@ -98,6 +99,7 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
                 Intent myIntent = new Intent(ProfilePage.this, userticket.class);
                 myIntent.putExtra("BusinessName", temp.getBusinessName());
                 myIntent.putExtra("Location", temp.getLocation());
+                myIntent.putExtra("TicketID", temp.getTicketID());
                 startActivity(myIntent);
             }
         });

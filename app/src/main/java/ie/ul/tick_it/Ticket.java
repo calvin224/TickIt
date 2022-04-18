@@ -19,6 +19,7 @@ public class Ticket {
     private String BusinessName;
     private String count;
     private long Date;
+    private String TicketID;
 
     public Ticket() {
     }
@@ -32,7 +33,7 @@ public class Ticket {
         this.count = count;
         this.Date = date;
     }
-    
+
     public Ticket(String userID, String businessName, String EventName, String userName, String businessLocation) {
         this.BusinessName = businessName;
         this.UserID = userID;
@@ -80,6 +81,12 @@ public class Ticket {
     }
     public String getUserID() {
         return UserID;
+    }
+    public String getTicketID() {
+        return TicketID;
+    }
+    public void setTicketID(String ID) {
+        this.TicketID = ID;
     }
     @NonNull
     @Override

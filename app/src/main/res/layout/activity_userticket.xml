@@ -34,21 +34,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/DeleteButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginBottom="64dp"
         android:background="@color/text_details_light"
+        android:backgroundTintMode="add"
         android:drawableLeft="@drawable/ic_minus"
         android:paddingLeft="24dp"
         android:paddingRight="48dp"
-        android:text="Location Details"
-        android:layout_marginBottom="64dp"
+        android:text="Remove Ticket"
         android:textAllCaps="false"
         android:textColor="@color/text_details"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="@id/guideline_left" />
 
     <Button
         android:id="@+id/UTPageLocation"
@@ -99,6 +99,6 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@id/UTPageLocation"
-        app:layout_constraintBottom_toTopOf="@id/button"/>
+        app:layout_constraintBottom_toTopOf="@id/DeleteButton"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

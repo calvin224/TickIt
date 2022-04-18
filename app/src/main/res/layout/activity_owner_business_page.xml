@@ -102,13 +102,13 @@
         android:drawableLeft="@drawable/ic_add"
         android:paddingLeft="24dp"
         android:paddingRight="48dp"
-        android:layout_marginTop="16dp"
         android:text="Add Ticket"
         android:textAllCaps="false"
         android:textColor="@color/text_details_medium"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/BusinessEmail"/>
+        app:layout_constraintTop_toBottomOf="@+id/BusinessEmail"
+        tools:layout_editor_absoluteY="332dp" />
 
 
 

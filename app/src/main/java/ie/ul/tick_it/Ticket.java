@@ -4,6 +4,9 @@ import android.provider.ContactsContract;
 
 import androidx.annotation.NonNull;
 
+import java.time.LocalDateTime;
+import java.time.LocalDate;
+
 public class Ticket {
     private String Name;
     private String EventName;
@@ -15,17 +18,19 @@ public class Ticket {
     private String Email;
     private String BusinessName;
     private String count;
+    private long Date;
 
     public Ticket() {
     }
 
-    public Ticket(String BusinessName,String EventName,String About,String Location,String image,String count) {
+    public Ticket(String BusinessName,String EventName,String About,String Location,String image,String count, long date) {
         this.Name = BusinessName;
         this.EventName = EventName;
         this.About = About;
         this.Location = Location;
         this.Image = image;
-        this.count= count;
+        this.count = count;
+        this.Date = date;
     }
     
     public Ticket(String userID, String businessName, String EventName, String userName, String businessLocation) {

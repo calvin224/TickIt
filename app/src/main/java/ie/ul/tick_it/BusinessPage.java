@@ -19,12 +19,18 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class BusinessPage extends AppCompatActivity implements View.OnClickListener {
     private FirebaseFirestore DB = FirebaseFirestore.getInstance();
     private Button locationbutton;
     private String location;
+    LocalDate currentdate = LocalDate.now();
+    ZoneId zoneId = ZoneId.systemDefault();
+    long currentdateepoch = currentdate.atStartOfDay(zoneId).toEpochSecond();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +54,10 @@ public class BusinessPage extends AppCompatActivity implements View.OnClickListe
                 this,android.R.layout.simple_list_item_1,new ArrayList<Ticket>()
         );
         BusinessListView.setAdapter(adapter);
+
         DB.collection("Tickets")
                 .whereEqualTo("Name",name)
+                .whereGreaterThanOrEqualTo("Date", currentdateepoch)
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override

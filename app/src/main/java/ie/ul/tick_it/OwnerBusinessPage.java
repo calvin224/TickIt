@@ -19,12 +19,15 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class OwnerBusinessPage extends AppCompatActivity implements View.OnClickListener {
     private Button addticket;
+    private Button editBusiness;
+    private Button deleteBusiness;
     private FirebaseUser user;
     private String UserID;
     String name;
     String Location;
     String BusinessType;
     String BusinessEmail;
+    String BusinessID;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
@@ -33,11 +36,16 @@ public class OwnerBusinessPage extends AppCompatActivity implements View.OnClick
         setContentView(R.layout.activity_owner_business_page);
         addticket = (Button) findViewById(R.id.addticket);
         addticket.setOnClickListener(this);
+        editBusiness = (Button) findViewById(R.id.editbusiness);
+        editBusiness.setOnClickListener(this);
+        deleteBusiness = (Button) findViewById(R.id.deletebusiness);
+        deleteBusiness.setOnClickListener(this);
         Intent mIntent = getIntent();
         name = mIntent.getStringExtra("Name");
         Location = mIntent.getStringExtra("Location");
         BusinessType = mIntent.getStringExtra("BusinessType");
         BusinessEmail = mIntent.getStringExtra("BusinessEmail");
+        BusinessID = mIntent.getStringExtra("BusinessID");
         user = FirebaseAuth.getInstance().getCurrentUser();
         UserID = user.getUid();
         final TextView nameTextView = (TextView) findViewById(R.id.displayownername);
@@ -72,9 +80,17 @@ public class OwnerBusinessPage extends AppCompatActivity implements View.OnClick
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-
             case R.id.addticket:
                 goaddticket();
+                break;
+            case R.id.editbusiness:
+                Intent myIntent = new Intent(OwnerBusinessPage.this, EditBusiness.class);
+                myIntent.putExtra("BusinessID", BusinessID);
+                startActivity(myIntent);
+                break;
+            case R.id.deletebusiness:
+                db.collection("Business").document(BusinessID).delete();
+                startActivity(new Intent(this,OwnerHomePage.class));
                 break;
         }
 

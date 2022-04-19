@@ -19,41 +19,45 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class EditOwnerProfile extends AppCompatActivity implements View.OnClickListener {
+public class EditBusiness extends AppCompatActivity implements View.OnClickListener {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     private FirebaseAuth mAuth;
-    private EditText Name, Age, EmailAddress;
-    private TextView UpdateProfile;
+    private EditText NewBusinessName, NewBusinessEmail, NewBusinessAddress;
+    private TextView EditBusiness;
+    private String BusinessID;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_owner_profile);
+        setContentView(R.layout.activity_edit_business);
         mAuth = FirebaseAuth.getInstance();
-        UpdateProfile = (Button) findViewById(R.id.RegisterOwner);
-        UpdateProfile.setOnClickListener(this);
-        Name = (EditText) findViewById(R.id.Name);
-        Age = (EditText) findViewById(R.id.Age);
-        EmailAddress = (EditText) findViewById(R.id.EmailAddress);
-
+        EditBusiness = (Button) findViewById(R.id.EditBusiness);
+        EditBusiness.setOnClickListener(this);
+        Intent mIntent = getIntent();
+        BusinessID = mIntent.getStringExtra("BusinessID");
+        NewBusinessName = (EditText) findViewById(R.id.EditBusinessName);
+        NewBusinessEmail = (EditText) findViewById(R.id.EditBusinessEmailAddress);
+        NewBusinessAddress = (EditText) findViewById(R.id.EditBusinessAddress);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.RegisterOwner:
-                updateProfile();
+            case R.id.EditBusiness:
+                updateBusiness();
                 startActivity(new Intent(this, OwnerHomePage.class));
                 break;
 
         } }
 
-    private void updateProfile() {
-        String name = Name.getText().toString().trim();
-        String age = Age.getText().toString().trim();
-        if (!name.equals("")) {
-            DocumentReference query = db.collection("Owners").document(FirebaseAuth.getInstance().getUid());
+    private void updateBusiness() {
+        String newBusinessName = NewBusinessName.getText().toString().trim();
+        String newBusinessEmail = NewBusinessEmail.getText().toString().trim();
+        String newBusinessAddress = NewBusinessAddress.getText().toString().trim();
+        if (!newBusinessName.equals("")) {
+            DocumentReference query = db.collection("Business").document(BusinessID);
             query
-                    .update("Name", name
+                    .update("Name", newBusinessName
                     )
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
@@ -68,10 +72,28 @@ public class EditOwnerProfile extends AppCompatActivity implements View.OnClickL
                         }
                     });
         }
-        if (!age.equals("")) {
-            DocumentReference query = db.collection("Owners").document(FirebaseAuth.getInstance().getUid());
+        if (!newBusinessEmail.equals("")) {
+            DocumentReference query = db.collection("Business").document(BusinessID);
             query
-                    .update("Age", age
+                    .update("Email", newBusinessEmail
+                    )
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Log.d(TAG, "DocumentSnapshot successfully updated!");
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.w(TAG, "Error updating document", e);
+                        }
+                    });
+        }
+        if (!newBusinessAddress.equals("")) {
+            DocumentReference query = db.collection("Business").document(BusinessID);
+            query
+                    .update("Location", newBusinessAddress
                     )
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
@@ -87,8 +109,7 @@ public class EditOwnerProfile extends AppCompatActivity implements View.OnClickL
                     });
         }
     }
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-        super.onPointerCaptureChanged(hasCapture);
-    }
+
+
 }
+

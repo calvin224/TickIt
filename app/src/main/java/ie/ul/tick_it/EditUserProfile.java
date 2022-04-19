@@ -51,23 +51,42 @@ public class EditUserProfile extends AppCompatActivity implements View.OnClickLi
         private void updateProfile() {
             String name = Name.getText().toString().trim();
             String age = Age.getText().toString().trim();
-            DocumentReference query = db.collection("Users").document(FirebaseAuth.getInstance().getUid());
-            query
-                    .update("Name", name,
-                            "Age",age
-                            )
-                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                            Log.d(TAG, "DocumentSnapshot successfully updated!");
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Log.w(TAG, "Error updating document", e);
-                        }
-                    });
+            if (!name.equals("")) {
+                DocumentReference query = db.collection("Users").document(FirebaseAuth.getInstance().getUid());
+                query
+                        .update("Name", name
+                        )
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Log.d(TAG, "DocumentSnapshot successfully updated!");
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.w(TAG, "Error updating document", e);
+                            }
+                        });
+            }
+            if (!age.equals("")) {
+                DocumentReference query = db.collection("Users").document(FirebaseAuth.getInstance().getUid());
+                query
+                        .update("Age", age
+                        )
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Log.d(TAG, "DocumentSnapshot successfully updated!");
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.w(TAG, "Error updating document", e);
+                            }
+                        });
+            }
         }
 
 

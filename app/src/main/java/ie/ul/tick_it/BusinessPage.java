@@ -27,6 +27,7 @@ import java.util.ArrayList;
 public class BusinessPage extends AppCompatActivity implements View.OnClickListener {
     private FirebaseFirestore DB = FirebaseFirestore.getInstance();
     private Button locationbutton;
+    private Button DeleteBusinessButton;
     private String location;
     private String image;
     LocalDate currentdate = LocalDate.now();

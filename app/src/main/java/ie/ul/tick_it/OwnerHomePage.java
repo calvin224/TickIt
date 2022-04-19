@@ -82,6 +82,7 @@ public class OwnerHomePage extends AppCompatActivity implements View.OnClickList
                         for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
 
                                 Business temp = document.toObject(Business.class);
+                                temp.setBusinessID(document.getId());
                                 BusinessList.add(temp);
 
                         }
@@ -101,6 +102,7 @@ public class OwnerHomePage extends AppCompatActivity implements View.OnClickList
                 myIntent.putExtra("Image", temp.getImage());
                 myIntent.putExtra("BusinessType", temp.getType());
                 myIntent.putExtra("BusinessEmail", temp.getEmail());
+                myIntent.putExtra("BusinessID", temp.getBusinessID());
                 startActivity(myIntent);
 
             }

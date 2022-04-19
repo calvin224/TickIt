@@ -11,6 +11,7 @@ public class Business {
     private String Type;
     private String Index;
     private String Email;
+    private String BusinessID;
 
     public Business() {
     }
@@ -54,6 +55,13 @@ public class Business {
     }
 
     public String getEmail() { return Email;}
+
+    public String getBusinessID() {
+        return BusinessID;
+    }
+    public void setBusinessID(String BusinessID) {
+        this.BusinessID = BusinessID;
+    }
 
     @NonNull
     @Override

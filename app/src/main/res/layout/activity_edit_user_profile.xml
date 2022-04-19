@@ -67,16 +67,14 @@
         android:id="@+id/RegisterOwner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
         android:background="@drawable/btn_bg"
         android:text="Update Profile"
         android:textAllCaps="false"
+        android:layout_marginTop="16dp"
         android:textColor="@color/text_details_medium"
-        app:layout_constraintBottom_toTopOf="@+id/footer_line"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@+id/guideline_right" />
+        app:layout_constraintTop_toBottomOf="@+id/Age" />
 
     <View
         android:id="@+id/footer_line"

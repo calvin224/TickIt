@@ -11,6 +11,7 @@
         android:id="@+id/ListView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:divider="@color/text_details_light"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/header_line" />
@@ -134,6 +135,23 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
         app:layout_constraintTop_toBottomOf="@id/addticket" />
+
+    <Button
+        android:id="@+id/deletebusiness"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/text_details_medium"
+        android:drawableLeft="@drawable/ic_delete"
+        android:paddingLeft="24dp"
+        android:paddingRight="48dp"
+        android:layout_marginBottom="16dp"
+        android:text="Delete Business"
+        android:textAllCaps="false"
+        android:textColor="@color/text_details"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@id/guideline_left" />
 
     <View
         android:id="@+id/header_line"

@@ -21,7 +21,7 @@
         android:textColor="@color/text_details"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toTopOf="@id/header_line"/>
+        app:layout_constraintTop_toBottomOf="@id/businessimage" />
 
 
         <androidx.constraintlayout.widget.Guideline
@@ -56,44 +56,68 @@
             android:layout_height="1dp"
             android:layout_marginTop="16dp"
             android:background="#fff"
-            app:layout_constraintTop_toBottomOf="@id/businessname"
+            app:layout_constraintTop_toBottomOf="@id/BPagelocation"
             tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/businessname"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textColor="@color/text_details"
+        android:textStyle="bold"
+        android:gravity="center"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
         app:layout_constraintTop_toBottomOf="@id/Logo"
         android:layout_marginTop="16dp"
         />
 
-        <ListView
-            android:id="@+id/listview"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintEnd_toStartOf="@id/guideline_right"
-            app:layout_constraintStart_toStartOf="@id/guideline_left"
-            app:layout_constraintTop_toBottomOf="@id/businessimage"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_height="0dp"
+        android:divider="@color/text_details_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/TextEvents" />
+
 
 
     <TextView
         android:id="@+id/businesslocation"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/text_details"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toEndOf="@id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/BPagelocation" />
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@id/businessname" />
 
     <TextView
         android:id="@+id/businessimage"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:textColor="@color/text_details"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
         app:layout_constraintTop_toBottomOf="@id/businesslocation" />
+
+
+    <TextView
+        android:id="@+id/TextEvents"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Events:"
+        android:textSize="18dp"
+        android:textColor="@color/text_details"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/header_line" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

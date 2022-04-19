@@ -28,6 +28,7 @@ public class BusinessPage extends AppCompatActivity implements View.OnClickListe
     private FirebaseFirestore DB = FirebaseFirestore.getInstance();
     private Button locationbutton;
     private String location;
+    private String image;
     LocalDate currentdate = LocalDate.now();
     ZoneId zoneId = ZoneId.systemDefault();
     long currentdateepoch = currentdate.atStartOfDay(zoneId).toEpochSecond();
@@ -39,19 +40,20 @@ public class BusinessPage extends AppCompatActivity implements View.OnClickListe
         Intent mIntent = getIntent();
         String name = mIntent.getStringExtra("Name");
         location = mIntent.getStringExtra("Location");
+        image = mIntent.getStringExtra("Image");
         final TextView businessname = (TextView) findViewById(R.id.businessname);
         final TextView businesslocation = (TextView) findViewById(R.id.businesslocation);
         final TextView businessimage = (TextView) findViewById(R.id.businessimage);
         locationbutton = (Button) findViewById(R.id.BPagelocation );
         locationbutton.setOnClickListener(this);
         businessname.setText(name);
-        businesslocation.setText(name);
-        businessimage.setText(name);
+        businesslocation.setText(location);
+        businessimage.setText(image);
         ArrayList<Ticket> TicketList = new ArrayList<>();
 
         ListView BusinessListView = findViewById(R.id.listview);
         ArrayAdapter<Ticket> adapter = new ArrayAdapter<Ticket>(
-                this,android.R.layout.simple_list_item_1,new ArrayList<Ticket>()
+                this,R.layout.row,new ArrayList<Ticket>()
         );
         BusinessListView.setAdapter(adapter);
 

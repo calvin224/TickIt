@@ -43,7 +43,7 @@ public class HomePage extends AppCompatActivity  implements View.OnClickListener
         search.setOnClickListener(this);
         ListView BusinessListView = findViewById(R.id.ListView);
         ArrayAdapter<Business> adapter = new ArrayAdapter<Business>(
-                this,android.R.layout.simple_list_item_1,new ArrayList<Business>()
+                this,R.layout.row,new ArrayList<Business>()
         );
         BusinessListView.setAdapter(adapter);
         DB.collection("Business")

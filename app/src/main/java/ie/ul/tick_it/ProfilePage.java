@@ -72,7 +72,7 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
 
         ListView ListView = findViewById(R.id.listview);
         ArrayAdapter<Ticket> adapter = new ArrayAdapter<Ticket>(
-                this,android.R.layout.simple_list_item_1,new ArrayList<Ticket>()
+                this,R.layout.row,new ArrayList<Ticket>()
         );
         ListView.setAdapter(adapter);
         db.collection("UserTickets")

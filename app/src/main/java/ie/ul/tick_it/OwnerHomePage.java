@@ -71,7 +71,7 @@ public class OwnerHomePage extends AppCompatActivity implements View.OnClickList
         ArrayList<Business> BusinessList = new ArrayList<>();
         ListView BusinessListView = findViewById(R.id.ListView);
         ArrayAdapter<Business> adapter = new ArrayAdapter<Business>(
-                this,android.R.layout.simple_list_item_1,new ArrayList<Business>()
+                this,R.layout.row,new ArrayList<Business>()
         );
         BusinessListView.setAdapter(adapter);
         db.collection("Business").whereEqualTo("OwnerID",user.getUid())
@@ -98,6 +98,7 @@ public class OwnerHomePage extends AppCompatActivity implements View.OnClickList
                 Intent myIntent = new Intent(OwnerHomePage.this, OwnerBusinessPage.class);
                 myIntent.putExtra("Name", temp.getName());
                 myIntent.putExtra("Location", temp.getLocation());
+                myIntent.putExtra("Image", temp.getImage());
                 myIntent.putExtra("BusinessType", temp.getType());
                 myIntent.putExtra("BusinessEmail", temp.getEmail());
                 startActivity(myIntent);

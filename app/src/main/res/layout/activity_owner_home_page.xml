@@ -91,6 +91,7 @@
     <Button
         android:id="@+id/editownerprofile"
         android:layout_width="0dp"
+        android:layout_marginTop="8dp"
         android:layout_height="0dp"
         android:layout_gravity="center"
         android:drawableTop="@drawable/ic_user"
@@ -111,6 +112,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_gravity="center"
+        android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
         android:drawableTop="@drawable/ic_guest_list"
         android:gravity="center"

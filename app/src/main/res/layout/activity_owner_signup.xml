@@ -85,7 +85,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/et_bg"
-        android:drawableRight="@drawable/ic_eye"
         android:hint="Password"
         android:inputType="textPassword"
         android:padding="16dp"

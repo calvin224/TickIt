@@ -40,6 +40,7 @@
         android:inputType="textEmailAddress"
         android:background="@drawable/et_bg"
         android:hint="E-mail Address"
+        android:textColor="@color/text_details"
         android:textColorHint="@color/text_details"
         android:padding="16dp"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
@@ -53,10 +54,10 @@
         android:layout_marginTop="16dp"
         android:inputType="textPassword"
         android:background="@drawable/et_bg"
-        android:hint="Password"
+        android:hint="Password (*min. 6 characters)"
         android:textColorHint="@color/text_details"
+        android:textColor="@color/text_details"
         android:padding="16dp"
-        android:drawableRight="@drawable/ic_eye"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
@@ -73,17 +74,6 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
-
-    <TextView
-        android:id="@id/forgotpassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Forgot password ?"
-        android:textColor="@color/text_details"
-        app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintEnd_toStartOf="@id/guideline_right"
-        app:layout_constraintTop_toBottomOf="@+id/signIn"
-        android:layout_marginTop="16dp" />
 
     <View
         android:id="@+id/footer_line"
@@ -122,7 +112,7 @@
         android:layout_width="120dp"
         android:layout_height="1dp"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/forgotpassword"
+        app:layout_constraintTop_toBottomOf="@id/signIn"
         android:background="@color/text_details_medium"
         app:layout_constraintBottom_toTopOf="@id/UserLogin"
         app:layout_constraintHorizontal_chainStyle="spread_inside"

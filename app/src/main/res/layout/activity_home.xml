@@ -9,7 +9,7 @@
 
     <EditText
         android:id="@+id/SearchText"
-        android:layout_width="0dp"
+        android:layout_width="225dp"
         android:layout_height="0dp"
         android:background="@drawable/et_bg"
         android:paddingLeft="0dp"
@@ -17,9 +17,10 @@
         android:gravity="center"
         android:inputType="textEmailAddress"
         android:textColorHint="@color/text_details"
+        android:textColor="@color/text_details"
         app:layout_constraintBottom_toTopOf="@+id/restaurants"
         app:layout_constraintEnd_toStartOf="@id/search"
-        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintStart_toEndOf="@id/reset"
         app:layout_constraintTop_toTopOf="@id/search" />
 
 
@@ -28,7 +29,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
-        android:divider="@color/text_details_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintHorizontal_bias="0.0"
@@ -108,11 +108,11 @@
 
     <Button
         android:id="@+id/search"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/btn_bg"
         android:drawableRight="@drawable/ic_search"
-        android:paddingRight="32dp"
+        android:paddingRight="24dp"
         android:gravity="center"
         android:textAllCaps="false"
         android:layout_marginTop="16dp"
@@ -122,6 +122,21 @@
         app:layout_constraintStart_toEndOf="@id/SearchText"
         app:layout_constraintBottom_toTopOf="@id/nightclubs"/>
 
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_bg"
+        android:drawableLeft="@drawable/ic_reset"
+        android:paddingLeft="22dp"
+        android:textAllCaps="false"
+        android:textColor="@color/text_details"
+        app:layout_constraintBottom_toTopOf="@id/nightclubs"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintEnd_toStartOf="@id/SearchText"
+        app:layout_constraintTop_toBottomOf="@id/header_line" />
 
     <View
         android:id="@+id/header_line"

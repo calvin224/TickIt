@@ -40,6 +40,31 @@
         <entry key="..\:/Users/cians/Downloads/TickIt-master/app/src/main/res/layout/activity_register_business.xml" value="0.5505208333333333" />
         <entry key="..\:/Users/cians/Downloads/TickIt-master/app/src/main/res/layout/activity_register_user.xml" value="0.5505208333333333" />
         <entry key="..\:/Users/cians/Downloads/TickIt-master/app/src/main/res/layout/activity_ticket_page.xml" value="0.5505208333333333" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/drawable/ic_delete.xml" value="0.137" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/drawable/ic_edit.xml" value="0.1545" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/drawable/ic_minus.xml" value="0.1255" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/drawable/ic_reset.xml" value="0.137" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/drawable/ic_search.xml" value="0.1015" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/layout/activity_business_page.xml" value="0.22" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/layout/activity_edit_business.xml" value="0.22" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/layout/activity_edit_owner_profile.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/layout/activity_edit_user_profile.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/layout/activity_filtered_home_page.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/layout/activity_maps.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/layout/activity_owner_addticket.xml" value="0.22" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/layout/activity_owner_business_page.xml" value="0.22" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/layout/activity_owner_home_page.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/layout/activity_owner_login.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/layout/activity_owner_signup.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/layout/activity_profile_page.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/layout/activity_register_business.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/layout/activity_register_user.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/layout/activity_search.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/layout/activity_ticket_page.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/layout/activity_userticket.xml" value="0.22" />
+        <entry key="..\:/Users/cians/StudioProjects/TickIt/app/src/main/res/layout/row.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/jacky/StudioProjects/TickIt/app/src/main/res/layout/activity_business_page.xml" value="0.14722222222222223" />
         <entry key="..\:/Users/jacky/StudioProjects/TickIt/app/src/main/res/layout/activity_edit_business.xml" value="0.14722222222222223" />
         <entry key="..\:/Users/jacky/StudioProjects/TickIt/app/src/main/res/layout/activity_edit_owner_profile.xml" value="0.14722222222222223" />

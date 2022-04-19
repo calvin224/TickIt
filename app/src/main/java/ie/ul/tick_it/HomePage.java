@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -26,6 +27,7 @@ import java.util.jar.Attributes;
 public class HomePage extends AppCompatActivity  implements View.OnClickListener{
     private FirebaseFirestore DB = FirebaseFirestore.getInstance();
     private Button Profile,restaurants,nightclubs,search;
+    private EditText SearchText;
     private Business temp;
 
     @Override
@@ -39,6 +41,7 @@ public class HomePage extends AppCompatActivity  implements View.OnClickListener
         restaurants.setOnClickListener( this);
         nightclubs = (Button) findViewById(R.id.nightclubs);
         nightclubs.setOnClickListener(this);
+        SearchText = (EditText) findViewById(R.id.SearchText);
         search = (Button) findViewById(R.id.search);
         search.setOnClickListener(this);
         ListView BusinessListView = findViewById(R.id.ListView);
@@ -93,7 +96,9 @@ public class HomePage extends AppCompatActivity  implements View.OnClickListener
                 startActivity(FilteredHomePage);
                 break;
             case R.id.search:
-                startActivity(new Intent(this,Search.class));
+                String searchtext = SearchText.getText().toString().trim();
+                Search.putExtra("Filter", searchtext);
+                startActivity(Search);
                 break;
         }
     }

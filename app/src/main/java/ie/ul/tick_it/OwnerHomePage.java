@@ -32,7 +32,7 @@ public class OwnerHomePage extends AppCompatActivity implements View.OnClickList
     private Button Logout;
     private FirebaseUser user;
     private String UserID;
-    private Button newbusiness,editprofile;
+    private Button newbusiness,editprofile,scanticket;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
@@ -47,6 +47,8 @@ public class OwnerHomePage extends AppCompatActivity implements View.OnClickList
         final TextView AgeTextView = (TextView) findViewById(R.id.displayownerage);
         newbusiness = (Button) findViewById(R.id.NewBusiness);
         newbusiness.setOnClickListener(this);
+        scanticket = (Button) findViewById(R.id.scanticket);
+        scanticket.setOnClickListener(this);
         editprofile = (Button) findViewById(R.id.editownerprofile);
         editprofile.setOnClickListener(this);
         DocumentReference docRef = db.collection("Owners").document(UserID);
@@ -117,6 +119,9 @@ public class OwnerHomePage extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.editownerprofile:
                 startActivity(new Intent(this,EditOwnerProfile.class));
+                break;
+            case R.id.scanticket:
+                startActivity(new Intent(this,OwnerTicketScanner.class));
                 break;
         }
     }

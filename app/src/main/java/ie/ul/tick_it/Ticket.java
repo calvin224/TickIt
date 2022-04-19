@@ -20,6 +20,7 @@ public class Ticket {
     private String count;
     private long Date;
     private String TicketID;
+    private boolean Scanned;
 
     public Ticket() {
     }
@@ -34,12 +35,13 @@ public class Ticket {
         this.Date = date;
     }
 
-    public Ticket(String userID, String businessName, String EventName, String userName, String businessLocation) {
+    public Ticket(String userID, String businessName, String EventName, String userName, String businessLocation, boolean scanned) {
         this.BusinessName = businessName;
         this.UserID = userID;
         this.Name = userName;
         this.EventName = EventName;
         this.Location = businessLocation;
+        this.Scanned = scanned;
     }
 
 
@@ -88,6 +90,13 @@ public class Ticket {
     public void setTicketID(String ID) {
         this.TicketID = ID;
     }
+    public void setScanned(boolean scanned) {
+        this.Scanned = scanned;
+    }
+    public boolean getScanned() {
+        return Scanned;
+    }
+
     @NonNull
     @Override
     public String toString() {

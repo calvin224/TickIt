@@ -50,6 +50,9 @@
             android:name=".EditBusiness"
             android:exported="false" />
         <activity
+            android:name=".OwnerTicketScanner"
+            android:exported="false" />
+        <activity
             android:name=".RegisterBusiness"
             android:exported="false" />
         <activity

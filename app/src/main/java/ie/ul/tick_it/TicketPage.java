@@ -109,6 +109,7 @@ public class TicketPage extends AppCompatActivity implements View.OnClickListene
             businessMap.put("EventName", Eventname);
             businessMap.put("BusinessName", BusinessName);
             businessMap.put("Location", BusinessLocation);
+            businessMap.put("Scanned", false);
             db.collection("UserTickets").document()
                     .set(businessMap)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -123,7 +124,27 @@ public class TicketPage extends AppCompatActivity implements View.OnClickListene
                             Log.w(TAG, "Error writing document", e);
                         }
                     });
-            Ticket ticket = new Ticket(UserID, BusinessName, UserEmail, UserName, BusinessLocation);
+            Ticket ticket = new Ticket(UserID, BusinessName, UserEmail, UserName, BusinessLocation, false);
+            db.collection("UserTickets")
+                    .whereEqualTo("UserID", UserID)
+                    .get()
+                    .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                        @Override
+                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                            for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
+                                Ticket temp = document.toObject(Ticket.class);
+                                if (temp.getEventName().equals(Eventname)) {
+                                    String ticketID = document.getId();
+                                    DocumentReference query = db.collection("UserTickets").document(ticketID);
+                                    query.update("TicketID", ticketID);
+                                } else{
+                                    continue;
+                                }
+
+                            }
+
+                        }
+                    });
             minusticket();
             addbutton.setText("You have a ticket");
             hastaken = 1;

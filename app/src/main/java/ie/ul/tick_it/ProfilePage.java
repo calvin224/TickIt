@@ -76,12 +76,12 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
         );
         ListView.setAdapter(adapter);
         db.collection("UserTickets")
-                .whereEqualTo("UserID",UserID)
-                .get()
-                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                    @Override
-                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                        for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
+                                     .whereEqualTo("UserID",UserID)
+                                     .get()
+                                     .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                                         @Override
+                                         public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                                             for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
                             Ticket temp = document.toObject(Ticket.class);
                             temp.setTicketID(document.getId());
                             TicketList.add(temp);

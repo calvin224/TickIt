@@ -87,17 +87,30 @@
         app:layout_constraintTop_toBottomOf="@+id/Logo" />
 
     <TextView
+        android:id="@+id/Businessname"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/text_details_medium"
+        android:textColor="@color/text_details"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/location"
+        app:layout_constraintBottom_toTopOf="@id/ticketname"/>
+
+    <TextView
         android:id="@+id/ticketname"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/text_details_medium"
-        android:paddingTop="112dp"
         android:textColor="@color/text_details"
         android:textAlignment="center"
-        android:textSize="48dp"
+        android:textSize="38dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/location"
+        app:layout_constraintTop_toBottomOf="@id/Businessname"
         app:layout_constraintBottom_toTopOf="@id/button"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

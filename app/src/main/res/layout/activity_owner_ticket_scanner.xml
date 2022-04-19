@@ -40,7 +40,6 @@
         android:background="@drawable/et_bg"
         android:gravity="center"
         android:hint="Ticket ID"
-        android:inputType="textEmailAddress"
         android:padding="16dp"
         android:textSize="32dp"
         android:textColor="@color/text_details"

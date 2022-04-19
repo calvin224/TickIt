@@ -92,13 +92,58 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/text_details_medium"
-        android:paddingTop="112dp"
         android:textColor="@color/text_details"
         android:textAlignment="center"
-        android:textSize="48dp"
+        android:gravity="center"
+        android:textSize="32dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@id/UTPageLocation"
-        app:layout_constraintBottom_toTopOf="@id/DeleteButton"/>
+        app:layout_constraintBottom_toTopOf="@id/Ticketname"/>
+
+    <TextView
+        android:id="@+id/Ticketname"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/text_details_medium"
+        android:textColor="@color/text_details"
+        android:textAlignment="center"
+        android:textSize="38dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/Businessname"
+        app:layout_constraintBottom_toTopOf="@id/texttickeid"/>
+
+    <TextView
+        android:id="@+id/texttickeid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/text_details_medium"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/text_details"
+        android:textSize="18dp"
+        android:text="Ticket ID:"
+        app:layout_constraintTop_toBottomOf="@id/Ticketname"
+        app:layout_constraintBottom_toTopOf="@id/TicketID"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right" />
+
+    <TextView
+        android:id="@+id/TicketID"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/text_details_medium"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/text_details"
+        android:textSize="24dp"
+        android:textAllCaps="true"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/texttickeid"
+        app:layout_constraintBottom_toTopOf="@id/DeleteButton"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

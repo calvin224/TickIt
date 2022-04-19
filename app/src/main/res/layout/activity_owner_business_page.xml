@@ -117,7 +117,7 @@
         app:layout_constraintTop_toBottomOf="@+id/BusinessEmail"
         tools:layout_editor_absoluteY="332dp" />
 
-
+    <!-- Set Seats Button if to be used
     <Button
         android:id="@+id/SetSeats"
         android:layout_width="0dp"
@@ -133,6 +133,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/addticket" />
+        -->
 
     <Button
         android:id="@+id/editbusiness"
@@ -148,7 +149,7 @@
         android:textColor="@color/text_details_medium"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/SetSeats" />
+        app:layout_constraintTop_toBottomOf="@id/addticket" />
 
     <Button
         android:id="@+id/deletebusiness"

@@ -22,6 +22,7 @@
         app:layout_constraintStart_toStartOf="@id/guideline_left"
         app:layout_constraintTop_toTopOf="@id/search" />
 
+
     <ListView
         android:id="@+id/ListView"
         android:layout_width="0dp"
@@ -30,9 +31,10 @@
         android:divider="@color/text_details_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@+id/restaurants" />
-
+        app:layout_constraintTop_toBottomOf="@+id/restaurants"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_left"

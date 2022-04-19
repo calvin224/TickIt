@@ -26,7 +26,7 @@ import java.util.jar.Attributes;
 
 public class Search extends AppCompatActivity  implements View.OnClickListener{
     private FirebaseFirestore DB = FirebaseFirestore.getInstance();
-    private Button Profile,restaurants,nightclubs,search;
+    private Button Profile,restaurants,nightclubs,search,reset;
     private EditText SearchText;
     private Business temp;
     private String filter;
@@ -44,6 +44,8 @@ public class Search extends AppCompatActivity  implements View.OnClickListener{
         SearchText = (EditText) findViewById(R.id.SearchText);
         search = (Button) findViewById(R.id.search);
         search.setOnClickListener(this);
+        reset = (Button) findViewById(R.id.reset);
+        reset.setOnClickListener(this);
         Intent mIntent = getIntent();
         filter = mIntent.getStringExtra("Filter");
         ListView BusinessListView = findViewById(R.id.ListView);
@@ -105,6 +107,9 @@ public class Search extends AppCompatActivity  implements View.OnClickListener{
                 String searchtext = SearchText.getText().toString().trim();
                 Search.putExtra("Filter", searchtext);
                 startActivity(Search);
+                break;
+            case R.id.reset:
+                startActivity(new Intent(this,HomePage.class));
                 break;
         }
     }

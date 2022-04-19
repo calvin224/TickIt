@@ -138,7 +138,6 @@
         android:textStyle="bold"
         android:textColor="@color/text_details"
         android:textSize="24dp"
-        android:textAllCaps="true"
         android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/texttickeid"
         app:layout_constraintBottom_toTopOf="@id/DeleteButton"

@@ -44,6 +44,7 @@
             android:inputType="textEmailAddress"
             android:padding="16dp"
             android:textColorHint="@color/text_details"
+            android:textColor="@color/text_details"
             app:layout_constraintEnd_toStartOf="@id/guideline_right"
             app:layout_constraintStart_toStartOf="@id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/Logo" />
@@ -55,6 +56,7 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/et_bg"
             android:hint="Enter new age"
+            android:textColor="@color/text_details"
             android:inputType="number"
             android:padding="16dp"
             android:textColorHint="@color/text_details"
